@@ -1,0 +1,76 @@
+{% load static %}
+
+<div class="container" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+              <link href="{% static 'css/text.css' %}" rel="stylesheet">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    REGISTER
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+
+                            <form action ="register" method="post">
+                                {% csrf_token %}
+<!--                            <div class="form-group">-->
+
+
+<!--                                <label class="form-control-label">username</label>-->
+
+<!--                                <input type="text"  name="username">-->
+
+
+
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+
+<!--                                <label class="form-control-label">password</label>-->
+<!--                                    <input type="password"  name="password">-->
+
+
+<!--                            </div>-->
+<!--                            <div class="form-group">-->
+
+<!--                                <label class="form-control-label">confirmpassword</label>-->
+<!--                                    <input type="password" name="password1">-->
+
+
+<!--                            </div>-->
+                                <input  type="text" name="username" placeholder="enter your username"><br>
+    <input  type="text" name="first_name" placeholder="enter your firstname"><br>
+    <input  type="text" name="last_name" placeholder="enter your lastname"><br>
+    <input  type="text" name="email" placeholder="enter your email address"><br>
+    <input  type="password" name="password" placeholder="enter your password"><br>
+    <input  type="password" name="password1" placeholder="confirm password"><br>
+                            <div class="col-lg-12 loginbttm">
+
+                                    <!-- Error Message -->
+
+                                <div class="col-lg-6 login-btm login-button">
+                                    <input type="submit">
+                                    {% for  msg in messages %}<h2>{{msg}}</h2>
+                               {% endfor %}
+                                </div>
+                            </div></form>
+
+
+                                </div>
+                            </div>
+
+
+                                    <a class="btn btn-danger" href="{% url 'bankapp:form' %}"> Registration form </a>
+                                </div>
+
+                            </div>
+
+
+                    </div>
+                </div>
+              <div class="col-lg-3 col-md-2"></div>
+            </div>
+

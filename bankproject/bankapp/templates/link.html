@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href="{% static 'css/log.css' %}" rel="stylesheet">
+<br>
+<br>
+<h2> Your Application is successfully accepted</h2>
+<br>
+<br>
+<br>
+<a href="{% url 'bankapp:home' %}"><h1>Home</h1> </a>
+</body>
+</html>
